@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Gitdock Web
 
-First, run the development server:
+GitDock Web is the frontend for Gitdock, a modern Git-like version control system built from scratch with support for RBAC (Role-Based Access Control), cloud & networked storage, and real-time collaboration.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This web application is built using Next.js, Tailwind CSS, and Firebase for authentication and backend integration.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Core Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Secure Authentication**  
+  Login with Google, Microsoft, or email.
 
-## Learn More
+- **Organizations & Roles**  
+  Create or join organizations with roles:
+  - Admin
+  - Developer
+  - Viewer
 
-To learn more about Next.js, take a look at the following resources:
+- **Repository Management**  
+  - Create repositories (public or private)
+  - Set access permissions per collaborator
+  - Connect storage (Google Drive, OneDrive, or local network)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Branch-Level Access Control**  
+  - Restrict branch visibility and write access
+  - Allow or block branch creation per user
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Built-in Repo Messaging**  
+  Real-time discussions per repository.
 
-## Deploy on Vercel
+- **Documentation + CLI Integration**  
+  - Docs and “How to Use” guides
+  - Compatible with GitDock CLI (`gitdock push/pull`)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contributing
+Contributions are always welcome!
