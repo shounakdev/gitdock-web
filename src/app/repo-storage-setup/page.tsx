@@ -33,6 +33,8 @@ function RepoStorageSetupContent() {
 
 
   const [repoData, setRepoData] = useState<any>(null)
+  const [networkPath, setNetworkPath] = useState("");
+
 
   // Load repository data on mount
   useEffect(() => {
@@ -203,6 +205,27 @@ function RepoStorageSetupContent() {
             </p>
           </div>
         )}
+
+        {storageOption === "networkPath" && (
+  <>
+    <label className="text-sm font-medium mt-2">Enter network/local path</label>
+    <input
+      type="text"
+      value={networkPath}
+      onChange={(e) => setNetworkPath(e.target.value)}
+      placeholder="e.g. /home/user/gitdock-test"
+      className="w-full p-2 rounded bg-zinc-800 border border-zinc-700 text-sm text-white mt-1"
+    />
+
+    <button
+      onClick={triggerLocalRepoCreation}
+      className="w-full mt-3 bg-green-600 hover:bg-green-700 px-4 py-2 rounded-md text-white font-semibold"
+    >
+      Create on Local Drive
+    </button>
+  </>
+)}
+
 
         {storageOption === "networkPath" && (
   <button
